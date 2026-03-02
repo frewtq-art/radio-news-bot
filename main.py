@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # Берём токен из Railway Variables
-TOKEN = os.getenv( "8782328242:AAH5gW4CuLhsUdTb4Bmaq7568nTKZdcaMgw")
+TOKEN = os.getenv( "8782328242:AAFZ0CVWJBfuj6fmk9yb9-GRg3lvG7-fbCU")
 
 RSS_FEEDS = {
     "Argentina": "https://eleconomista.com.ar/ultimas-noticias/feed/",
