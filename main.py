@@ -9,7 +9,7 @@ TOKEN = os.environ.get("8782328242:AAH5gW4CuLhsUdTb4Bmaq7568nTKZdcaMgw")
 
 RSS_FEEDS = {
     "argentina": "https://eleconomista.com.ar/ultimas-noticias/feed/",
-    "RadioFarda": "https://www.en.radiofarda.com/rssfeeds"
+    "RadioFarda": "https://www.en.radiofarda.com/rssfeeds",
     "Mehr News" : "http://www.mehrnews.com/rss"
 }
 
