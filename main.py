@@ -1,14 +1,16 @@
-import os
+import os 
+TOKEN = os.getenv("8782328242:AAH5gW4CuLhsUdTb4Bmaq7568nTKZdcaMgw")
 import requests
 import feedparser
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-TOKEN = os.environ.get("BOT_TOKEN")
+TOKEN = os.environ.get("8782328242:AAH5gW4CuLhsUdTb4Bmaq7568nTKZdcaMgw")
 
 RSS_FEEDS = {
     "argentina": "https://eleconomista.com.ar/ultimas-noticias/feed/",
-    "mexico": "https://www.eluniversal.com.mx/rss/portada.xml"
+    "RadioFarda": "https://www.en.radiofarda.com/rssfeeds"
+    "Mehr News" : "http://www.mehrnews.com/rss"
 }
 
 def get_news(feed_url):
@@ -20,9 +22,9 @@ def get_news(feed_url):
 
 async def news(update: Update, context: ContextTypes.DEFAULT_TYPE):
     argentina_news = get_news(RSS_FEEDS["argentina"])
-    mexico_news = get_news(RSS_FEEDS["mexico"])
+    iran_news = get_news(RSS_FEEDS["Iran"])
 
-    message = f"🇦🇷 Новости Аргентины:\n{argentina_news}\n\n🇲🇽 Новости Мексики:\n{mexico_news}"
+    message = f"🇦🇷 Новости Аргентины:\n{argentina_news}\n\n🇲🇽 Новости ирана:\n{iran_news}"
     await update.message.reply_text(message)
 
 app = ApplicationBuilder().token(TOKEN).build()
